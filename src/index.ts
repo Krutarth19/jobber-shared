@@ -13,9 +13,9 @@ export {
   IResetPassword,
   ISignInPayload,
   ISignUpPayload,
-} from './interfaces/auth.interface';
+} from './auth.interface';
 
-export { IBuyerDocument, IReduxBuyer } from './interfaces/buyer.interface';
+export { IBuyerDocument, IReduxBuyer } from './buyer.interface';
 
 export {
   IChatBoxProps,
@@ -25,9 +25,9 @@ export {
   IConversationDocument,
   IMessageDetails,
   IMessageDocument,
-} from './interfaces/chat.interface';
+} from './chat.interface';
 
-export { IEmailLocals } from './interfaces/email.interface';
+export { IEmailLocals } from './email.interface';
 
 export {
   GigType,
@@ -40,7 +40,7 @@ export {
   IGigsProps,
   ISelectedBudget,
   ISellerGig,
-} from './interfaces/gig.interface';
+} from './gig.interface';
 
 export {
   IDeliveredWork,
@@ -51,7 +51,7 @@ export {
   IOrderMessage,
   IOrderNotifcation,
   IOrderReview,
-} from './interfaces/order.interface';
+} from './order.interface';
 
 export {
   IRatingCategories,
@@ -59,7 +59,7 @@ export {
   IRatingTypes,
   IReviewDocument,
   IReviewMessageDetails,
-} from './interfaces/review.interface';
+} from './review.interface';
 
 export {
   IHitsTotal,
@@ -68,7 +68,7 @@ export {
   IQueryString,
   ISearchResult,
   ITerm,
-} from './interfaces/search.interface';
+} from './search.interface';
 
 export {
   ICertificate,
@@ -77,7 +77,7 @@ export {
   ILanguage,
   ISellerDocument,
   SellerType,
-} from './interfaces/seller.interface';
+} from './seller.interface';
 
 export { uploads, videoUpload } from './cloudinary-upload';
 
