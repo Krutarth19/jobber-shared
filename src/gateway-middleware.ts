@@ -15,10 +15,10 @@ const tokens: string[] = [
 
 export function verifyGatewayRequest(
   req: Request,
-  res: Response,
+  _res: Response,
   next: NextFunction
 ): void {
-  if (req.headers?.gatewayToken) {
+  if (req.headers?.gatewaytoken) {
     throw new NotAuthorizedError(
       'Invalid request',
       'verifyGatewayRequest() method: Request is not coming from api gateway'
@@ -35,7 +35,10 @@ export function verifyGatewayRequest(
   }
 
   try {
-    const payload: { id: string; iat: number } = JWT.verify(token, '') as {
+    const payload: { id: string; iat: number } = JWT.verify(
+      token,
+      '54e1b393f'
+    ) as {
       id: string;
       iat: number;
     };
@@ -52,4 +55,5 @@ export function verifyGatewayRequest(
       'verifyGatewayRequest() method: Request is not coming from api gateway'
     );
   }
+  next(); 
 }
