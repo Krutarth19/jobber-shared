@@ -25,7 +25,7 @@ export function verifyGatewayRequest(
     );
   }
 
-  const token: string = req.headers?.gatewayToken as string;
+  const token: string = req.headers?.gatewaytoken as string;
 
   if (!token) {
     throw new NotAuthorizedError(
