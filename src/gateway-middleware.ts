@@ -18,7 +18,7 @@ export function verifyGatewayRequest(
   _res: Response,
   next: NextFunction
 ): void {
-  if (req.headers?.gatewaytoken) {
+  if (!req.headers?.gatewaytoken) {
     throw new NotAuthorizedError(
       'Invalid request',
       'verifyGatewayRequest() method: Request is not coming from api gateway'
@@ -55,5 +55,5 @@ export function verifyGatewayRequest(
       'verifyGatewayRequest() method: Request is not coming from api gateway'
     );
   }
-  next(); 
+  next();
 }
